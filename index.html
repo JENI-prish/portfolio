@@ -12,19 +12,31 @@
   box-sizing:border-box;
   font-family:Arial;
 }
-
-body{
-  color:white;
-  scroll-behavior:smooth;
-
-  /* 🌌 BACKGROUND IMAGE */
-  background: url("lap.jpg") no-repeat center center fixed;
-  background-size: cover;
+body {
+  margin: 0;
+  color: white;
+  
 }
 
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 200px;
+}
 /* dark overlay for readability */
 .overlay{
-  background: rgba(0,0,0,0.75);
+  background: rgba(15, 15, 15, 0.45);
   min-height:100vh;
 }
 
@@ -87,19 +99,7 @@ nav{
   color:#38bdf8;
 }
 
-/* profile image */
-.hero-img{
-  flex:1;
-}
 
-.hero-img img{
-  width:200px;
-  height:220px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid #38bdf8;
-  box-shadow:0 0 20px #38bdf8;
-}
 
 /* button */
 .btn{
@@ -237,11 +237,14 @@ footer{
     <a href="#projects" class="btn">View Projects</a>
   </div>
 
-  <div class="hero-img">
-    <img src="jeni K.JPG" alt="profile">
-  </div>
-
 </section>
+<video autoplay muted loop id="bg-video">
+  <source src="terr.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1>Welcome</h1>
+</div>
 
 <!-- ABOUT -->
 <section id="about" class="section">
@@ -273,8 +276,9 @@ footer{
 <br>
 <p>
 PSNA College of Engineering and Technology, Dindigul, Tamil Nadu.<br>
+
+B.E CSE
 <br>
-B.E CSE<br>
 CGPA - 8.26
 </p>
   </div>
@@ -291,11 +295,19 @@ Web Development Intern – Tamil InfoTechnolgy<br>
   </div>
 </section>
 </section>
+</section>
+<section id="about" class="section">
+  <div class="section-box">
+    <h2>Resume</h2>
+    <a href="https://drive.google.com/file/d/1Y70TO627XeXTWA5zaBxj2ERvXfu8tONE/view?usp=sharing" class="btn">view</a>
+  </div>
+</section>
+</section>
 <section id="about" class="section">
   <div class="section-box">
     <h2>Poster Making</h2>
     <br>
-    <a href="https://drive.google.com/file/d/1ABF__ewJgbX2cxBIIeWNxlmwQWAvE6xH/view?usp=drivesdk">Poster designs</a>
+    <a href="poster.html" class="btn">Poster designs</a>
   </div>
 </section>
 
@@ -305,18 +317,18 @@ Web Development Intern – Tamil InfoTechnolgy<br>
     <h2>Projects</h2>
     <div class="projects">
      <div class="card">
-  <h3>Login Page</h3>
-  <p>Responsive login form</p>
+  <h3>online shopping website</h3>
+ 
 
-  <a href="login.html" class="btn">View</a>
+  <a href="https://jeni-prish.github.io/Bride-s-Palace/" class="btn">View</a>
 </div>
       
 
       <div class="card">
-  <h3>Landing Page</h3>
-  <p>design page </p>
+  <h3>Hangman Guessing Game</h3>
+ 
 
-  <a href="landing.html" class="btn">View</a>
+  <a href="https://hangman-inyuzsgnpqmdvtc5qtuvep.streamlit.app/#word" class="btn">View</a>
 </div>
 
       
@@ -329,6 +341,7 @@ Web Development Intern – Tamil InfoTechnolgy<br>
   <div class="section-box">
     <h2>Contact</h2>
     <p>Email: jeniprish11@gmail.com</p>
+    <br>
     <button onclick="sayHi()">Say Hi 👋</button>
   </div>
 </section>
